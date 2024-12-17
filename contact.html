@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel= "stylesheet" href="style.css" />
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="navbox"></div>
+        </div>
+        <div class="navbar">
+            <div class="logo"> <a href ="#">Contact</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="getStarted.html" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="hero">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="service">Service</a></li>
+                <li><a href="contact">Contact</a></li>
+
+                <li><a href="getStarted.html" class="action_btn">Get Started</a></li>
+        </div>
+    </header>
+    <div class="contact-container">
+        <form action = "https://api.web3forms.com/submit" method="POST" class = "contact-left">  
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="1353106f-7c34-4a03-81a3-c78b5d4b5829">
+            <input type = "text" name = "name" placeholder = "Your Name" class="contact-input" required>
+            <input type = "email" name = "email" placeholder = "Your Email" class="contact-input" required>
+            <textarea  name = "message" placeholder = "Your Message" class="contact-input"> </textarea>
+            <button type ="submit" >Submit <img src ="assets/arrow_icon.png"></button>
+        </form>
+        <div class="contact-right">
+            <img class = "resize" src = "assets/rocket_1211737.png">
+        </div>
+    </div>
+
+    <main>
+        <section id="hero">
+            <h1></h1>
+            <p>
+            </p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+</html>
